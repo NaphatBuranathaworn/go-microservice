@@ -15,7 +15,7 @@ COPY go.mod go.mod
 COPY go.sum go.sum
 
 # building service binary at path discovergy/www
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOFLAGS=-mod=vendor go build ./cmd/watermark
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOFLAGS=-mod=vendor go build -o watermark ./cmd/watermark
 # RUN go build ./cmd/watermark
 
 
