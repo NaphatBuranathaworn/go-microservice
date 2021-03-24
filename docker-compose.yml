@@ -1,0 +1,9 @@
+version: '3'
+services:
+  watermark:
+    image: watermark_image
+    build: .
+    ports:
+     - "3333:8081"
+    volumes:
+     - ./pkg/watermark:/watermarksvc
